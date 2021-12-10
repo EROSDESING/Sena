@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualización de datos</title>
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <canvas id="bar-chart" width="800" height="350"></canvas>
+
+    <script>
+      //   async function getData() {
+      //     const response = await fetch('https://boyaxam.herokuapp.com/data')
+
+      //     const data = await response.json()
+      //     return data
+      //   }
+      new Chart(document.getElementById('bar-chart'), {
+        type: 'bar',
+        data: {
+          labels: ['Ph', 'Temperatura'],
+          datasets: [
+            {
+              label: 'Datos',
+              backgroundColor: ['#3e95cd', '#8e5ea2'],
+              data: [2, 9],
+            },
+          ],
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: ' Temperatura y ph',
+          },
+        },
+      })
+      console.log(data)
+    </script>
+  </body>
+</html>
